@@ -14,7 +14,9 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin:'https://api-tuproximoauto.onrender.com'
+}));
 app.use(express.json());
 
 // Montamos las rutas de los vehículos en la URL base /api/vehiculos
@@ -33,7 +35,7 @@ app.post('/api/auth/acceso-privado', ipWhitelist, loginAdmin);
 // 2. Protegemos las rutas de vehículos sensibles
 // Ejemplo: router.post('/', ipWhitelist, verificarToken, crearVehiculo);
 // SOLO UN LISTEN AL FINAL
-const PORT = process.env.PORT || 3500;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
 });
