@@ -17,7 +17,8 @@ const app = express();
 app.use(cors({
   origin: [
     'https://tuproximoauto-ebd2-academia-del-ka-s-projects.vercel.app',
-    'https://tuproximoauto-ddas4kq8m-academia-del-ka-s-projects.vercel.app'
+    'https://tuproximoauto-ddas4kq8m-academia-del-ka-s-projects.vercel.app',
+    'https://tuproximoauto-one.vercel.app'
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   credentials: true
