@@ -15,7 +15,10 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin:'https://api-tuproximoauto.onrender.com'
+  // Quien tiene permiso para consultar al backend es TU FRONTEND
+  origin: 'https://tuproximoauto-ebd2-academia-del-ka-s-projects.vercel.app', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  credentials: true
 }));
 app.use(express.json());
 
