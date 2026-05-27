@@ -16,7 +16,7 @@ const app = express();
 
 app.use(cors({
   // Quien tiene permiso para consultar al backend es TU FRONTEND
-  origin: 'https://tuproximoauto-ebd2-academia-del-ka-s-projects.vercel.app', 
+  origin: 'https://tuproximoauto-one.vercel.app/', 
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   credentials: true
 }));
