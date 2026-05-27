@@ -15,11 +15,15 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  // Quien tiene permiso para consultar al backend es TU FRONTEND
-  origin: 'https://tuproximoauto-one.vercel.app/', 
+  origin: [
+    'https://tuproximoauto-ebd2-academia-del-ka-s-projects.vercel.app',
+    'https://tuproximoauto-ddas4kq8m-academia-del-ka-s-projects.vercel.app'
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   credentials: true
 }));
+
+
 app.use(express.json());
 
 // Montamos las rutas de los vehículos en la URL base /api/vehiculos
