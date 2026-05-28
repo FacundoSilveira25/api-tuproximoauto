@@ -14,6 +14,10 @@ connectDB();
 
 const app = express();
 
+// ¡ESTA ES LA LÍNEA CLAVE PARA RENDER!
+// Le dice a Express que extraiga la IP real del cliente, no la del balanceador de carga.
+app.set('trust proxy', true);
+
 app.use(cors({
   origin: [
     'https://tuproximoauto-ebd2-academia-del-ka-s-projects.vercel.app',
